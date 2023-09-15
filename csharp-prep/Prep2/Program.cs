@@ -68,7 +68,7 @@ class Program
 
         if (numberPercentage >= 70)
         {
-            Console.WriteLine("Congratulations!!! You aproved the course!!!");
+            Console.WriteLine("Congratulations!!! You approved the course!!!");
         }
         else
         {
