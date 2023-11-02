@@ -8,6 +8,7 @@ class Program
         //Mindfulness Program
         string option;
         int optionInt;
+
         //General menu
         do
         {
@@ -24,26 +25,24 @@ class Program
 
             switch(optionInt)
             {
-                case 1: //Write new entry
+                case 1: //Console.WriteLine("Option: 1 - Breathing Activity\n");
                     Console.Clear();
                     BreathingActivity breathingActivity = new BreathingActivity("", "", 0);
                     breathingActivity.RunBreathingActivity();
 
                 break;
 
-                case 2:
+                case 2: //Console.WriteLine("Option: 2 - Reflecting Activity\n"); 
                     Console.Clear();
-                    //Console.WriteLine("Option: 2 - Reflecting Activity\n");
                     ReflectingActivity reflectingActivity = new ReflectingActivity("", "", 0);
                     reflectingActivity.RunReflectingActivity();               
 
                 break;
 
-                case 3:
+                case 3: //Console.WriteLine("Option: 3 - Listing Activity\n");
                     Console.Clear();
-                    Console.WriteLine("Option: 3 - Listing Activity\n");
-                    Console.ReadLine();
-
+                    ListingActivity listingActivity = new ListingActivity("", "", 0);
+                    listingActivity.RunListingActivity(); 
 
                 break;
 
