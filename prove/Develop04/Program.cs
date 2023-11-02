@@ -33,8 +33,9 @@ class Program
 
                 case 2:
                     Console.Clear();
-                    Console.WriteLine("Option: 2 - Reflecting Activity\n");
-                    Console.ReadLine();                
+                    //Console.WriteLine("Option: 2 - Reflecting Activity\n");
+                    ReflectingActivity reflectingActivity = new ReflectingActivity("", "", 0);
+                    reflectingActivity.RunReflectingActivity();               
 
                 break;
 

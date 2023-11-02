@@ -32,7 +32,7 @@ public class Activity
         Console.Clear();
         Console.WriteLine($"Welcome to the {_activityName}");   
         Console.WriteLine($"\nThis activity will help you {_description}.\n");
-        Console.Write($"\nHow long, in seconds, would you like for your session? "); 
+        Console.Write($"How long, in seconds, would you like for your session? "); 
         durationStr = Console.ReadLine();
         _duration = int.Parse(durationStr); 
 
@@ -44,9 +44,9 @@ public class Activity
     public void DisplayEndingMessage() // Shows Well Done! Message, including spiner pauses
     {
         Console.WriteLine("Well done!!!"); 
-        SpinnerPause(5);  
+        SpinnerPause(4);  
         Console.WriteLine($"\nYou have completed another {_duration} seconds of the {_activityName}."); 
-        SpinnerPause(5);  
+        SpinnerPause(4);  
         //Console.ReadLine();
         return;
     }

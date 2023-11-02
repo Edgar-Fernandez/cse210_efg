@@ -39,13 +39,8 @@ public class BreathingActivity : Activity
         {
             Breath();
         }
-        
-        
-        //Breath();
 
-        
         DisplayEndingMessage();
-
         return;
     }
 
