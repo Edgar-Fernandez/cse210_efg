@@ -3,14 +3,14 @@ using System.Reflection.Metadata;
 
 public class ReflectingActivity : Activity
 {
-    private List<string> _prompts = new List<string> //initializing pompt questions
+    private List<string> _prompts = new List<string> // Initializing prompts
     {
         "Think of a time when you stood up for someone else",
         "Think of a time when you did something really difficult",
         "Think of a time when you helped someone in need",
         "Think of a time when you did something truly selfless"
     };
-    private List<string> _questions = new List<string> //initializing pompt questions
+    private List<string> _questions = new List<string> // Initializing questions
     {
         "Why was this experience meaningful to you?",
         "Have you ever done anything like this before?",
@@ -25,17 +25,9 @@ public class ReflectingActivity : Activity
     string _prompt;
     string _question;
 
+
     // Constructors
-
-    /*public BreathingActivity() // 
-    {
-        _activityName = "";
-        _description = "";
-        _duration = 0;
-    }*/
-
-    public ReflectingActivity(string activityName, string description, int duration) : base(activityName, description, duration)// Reflecting activity initialization
-    
+    public ReflectingActivity(string activityName, string description) : base(activityName, description)// Reflecting activity initialization  
     {
         _activityName = "Reflecting Activity";
         _description = "reflect on times in your life when you have shown strength and resilence. This will help you recognize the power you have and how you can use it in other aspects of your life";
@@ -91,16 +83,13 @@ public class ReflectingActivity : Activity
         Console.WriteLine("Now ponder in each of the following questions as they related to this experience. ");
         Console.Write("You may begin in: ");
         TimerPause(5);  
-        return;
-      
-       
+        return;   
     }
 
     public void DisplayRandomQuestion()
     {
         Console.Write($"> {GetRandomQuestion()} ");
-        SpinnerPause(5);
+        SpinnerPause(7);
         Console.WriteLine();
     }
-
 }

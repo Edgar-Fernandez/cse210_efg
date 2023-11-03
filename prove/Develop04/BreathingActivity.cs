@@ -3,20 +3,9 @@ using System.Reflection.Metadata;
 
 public class BreathingActivity : Activity
 {
-    // This class has no atributes
-
-
-    // Constructors
-
-    /*public BreathingActivity() // 
-    {
-        _activityName = "";
-        _description = "";
-        _duration = 0;
-    }*/
-
-    public BreathingActivity(string activityName, string description, int duration) : base(activityName, description, duration)// Breathing activity initialization
     
+    // Constructors
+    public BreathingActivity(string activityName, string description) : base(activityName, description)// Breathing activity initialization
     {
         _activityName = "Breathing Activity";
         _description = "relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing";
@@ -44,7 +33,7 @@ public class BreathingActivity : Activity
         return;
     }
 
-    public void Breath()
+    public void Breath() //Breath indications
     {
         Console.Write("Breathe in...");
         TimerPause(4);

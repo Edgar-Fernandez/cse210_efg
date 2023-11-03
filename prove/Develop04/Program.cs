@@ -1,4 +1,19 @@
 using System;
+using System.Reflection.Metadata;
+
+/*
+*****************************************************************
+SHOWING CREATIVITY AND EXCEEDING REQUIREMENTS
+
+1. I added a log of how many times activities were performed, which
+   is shown at the end of the session.
+2. I enhanced the "Get ready..." behavior in the base class
+   with an additional ainmation, in which the words are blinking 
+   in color, but not the spinner, during the animation. The standard
+   "Get ready..." behavior is also included, bt it is commented.
+
+*****************************************************************
+*/
 
 class Program
 {
@@ -8,6 +23,10 @@ class Program
         //Mindfulness Program
         string option;
         int optionInt;
+
+        int act1 = 0;
+        int act2 = 0;
+        int act3 = 0;
 
         //General menu
         do
@@ -26,29 +45,29 @@ class Program
             switch(optionInt)
             {
                 case 1: //Console.WriteLine("Option: 1 - Breathing Activity\n");
-                    Console.Clear();
-                    BreathingActivity breathingActivity = new BreathingActivity("", "", 0);
+                    act1++;
+                    Console.Clear();                   
+                    BreathingActivity breathingActivity = new BreathingActivity("", "");
                     breathingActivity.RunBreathingActivity();
-
                 break;
 
                 case 2: //Console.WriteLine("Option: 2 - Reflecting Activity\n"); 
+                    act2++;
                     Console.Clear();
-                    ReflectingActivity reflectingActivity = new ReflectingActivity("", "", 0);
-                    reflectingActivity.RunReflectingActivity();               
-
+                    ReflectingActivity reflectingActivity = new ReflectingActivity("", "");
+                    reflectingActivity.RunReflectingActivity();                
                 break;
 
                 case 3: //Console.WriteLine("Option: 3 - Listing Activity\n");
+                    act3++;
                     Console.Clear();
-                    ListingActivity listingActivity = new ListingActivity("", "", 0);
-                    listingActivity.RunListingActivity(); 
-
+                    ListingActivity listingActivity = new ListingActivity("", "");
+                    listingActivity.RunListingActivity();                    
                 break;
 
                 case 4:
-                    Console.WriteLine("\nThanks for using the Mindfulness Program!\n");
-
+                    Console.WriteLine("\nThanks for using the Mindfulness Program!");
+                    Console.WriteLine($"\nIn this session you performed {act1} Breathing, {act2} Reflecting, and {act3} Listing activities.\n");
                 break;
             }
         } while (optionInt != 4);

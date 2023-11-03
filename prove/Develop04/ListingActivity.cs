@@ -3,7 +3,7 @@ using System.Reflection.Metadata;
 
 public class ListingActivity : Activity
 {
-    private List<string> _prompts = new List<string> //initializing pompt questions
+    private List<string> _prompts = new List<string> //initializing prompts
     {
         "Who are people that you appreciate?",
         "What are personal strengths of yours?",
@@ -13,18 +13,10 @@ public class ListingActivity : Activity
     };
 
     string _prompt;
-
-    // Constructors
-
-    /*public BreathingActivity() // 
-    {
-        _activityName = "";
-        _description = "";
-        _duration = 0;
-    }*/
-
-    public ListingActivity(string activityName, string description, int duration) : base(activityName, description, duration)// Reflecting activity initialization
     
+    
+    // Constructors
+    public ListingActivity(string activityName, string description) : base(activityName, description)// Reflecting activity initialization 
     {
         _activityName = "Listing Activity";
         _description = "reflect on the good things in your life by having you list as many things as you can in a certain area";
@@ -75,10 +67,6 @@ public class ListingActivity : Activity
         Console.Write("You may begin in: ");
         TimerPause(5);  
         Console.WriteLine();
-        return;
-      
-       
+        return;       
     }
-
-
 }
