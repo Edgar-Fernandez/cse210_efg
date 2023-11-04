@@ -8,9 +8,9 @@ SHOWING CREATIVITY AND EXCEEDING REQUIREMENTS
 1. I added a log of how many times activities were performed, which
    is shown at the end of the session.
 2. I enhanced the "Get ready..." behavior in the base class
-   with an additional ainmation, in which the words are blinking 
+   with an additional animation, in which the words are blinking 
    in color, but not the spinner, during the animation. The standard
-   "Get ready..." behavior is also included, bt it is commented.
+   "Get ready..." behavior is also included, but it is commented.
 
 *****************************************************************
 */
@@ -47,21 +47,21 @@ class Program
                 case 1: //Console.WriteLine("Option: 1 - Breathing Activity\n");
                     act1++;
                     Console.Clear();                   
-                    BreathingActivity breathingActivity = new BreathingActivity("", "");
+                    BreathingActivity breathingActivity = new BreathingActivity(null, null);
                     breathingActivity.RunBreathingActivity();
                 break;
 
                 case 2: //Console.WriteLine("Option: 2 - Reflecting Activity\n"); 
                     act2++;
                     Console.Clear();
-                    ReflectingActivity reflectingActivity = new ReflectingActivity("", "");
+                    ReflectingActivity reflectingActivity = new ReflectingActivity(null, null);
                     reflectingActivity.RunReflectingActivity();                
                 break;
 
                 case 3: //Console.WriteLine("Option: 3 - Listing Activity\n");
                     act3++;
                     Console.Clear();
-                    ListingActivity listingActivity = new ListingActivity("", "");
+                    ListingActivity listingActivity = new ListingActivity(null, null);
                     listingActivity.RunListingActivity();                    
                 break;
 

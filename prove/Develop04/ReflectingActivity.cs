@@ -22,12 +22,12 @@ public class ReflectingActivity : Activity
         "What did you learn about yourself through this experience?",
         "How can you keep this experience in mind in the future?"
     };
-    string _prompt;
-    string _question;
+    private string _prompt;
+    private string _question;
 
 
     // Constructors
-    public ReflectingActivity(string activityName, string description) : base(activityName, description)// Reflecting activity initialization  
+    public ReflectingActivity(string? activityName, string? description) : base(activityName, description)// Reflecting activity initialization  
     {
         _activityName = "Reflecting Activity";
         _description = "reflect on times in your life when you have shown strength and resilence. This will help you recognize the power you have and how you can use it in other aspects of your life";

@@ -9,7 +9,7 @@ public class Activity
 
     // Constructors
 
-    public Activity(string name, string description) // Activity initialization
+    public Activity(string? name, string? description) // Activity initialization
     {
         _activityName = name;
         _description = description;
@@ -24,7 +24,7 @@ public class Activity
         Console.Clear();
         Console.WriteLine($"Welcome to the {_activityName}");   
         Console.WriteLine($"\nThis activity will help you {_description}.\n");
-        Console.Write($"\nHow long, in seconds, would you like for your session? "); 
+        Console.Write($"How long, in seconds, would you like for your session? "); 
         durationStr = Console.ReadLine();
         _duration = int.Parse(durationStr); 
         return;
@@ -119,5 +119,6 @@ public class Activity
                 Console.SetCursorPosition(0, 0);
             }
         }
+        Console.SetCursorPosition(0, 2);
     }
 }

@@ -12,11 +12,11 @@ public class ListingActivity : Activity
         "Who are some of your personal heroes?"
     };
 
-    string _prompt;
+    private string _prompt;
     
     
     // Constructors
-    public ListingActivity(string activityName, string description) : base(activityName, description)// Reflecting activity initialization 
+    public ListingActivity(string? activityName, string? description) : base(activityName, description)// Reflecting activity initialization 
     {
         _activityName = "Listing Activity";
         _description = "reflect on the good things in your life by having you list as many things as you can in a certain area";

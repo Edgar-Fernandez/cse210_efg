@@ -5,7 +5,7 @@ public class BreathingActivity : Activity
 {
     
     // Constructors
-    public BreathingActivity(string activityName, string description) : base(activityName, description)// Breathing activity initialization
+    public BreathingActivity(string? activityName, string? description) : base(activityName, description)// Breathing activity initialization
     {
         _activityName = "Breathing Activity";
         _description = "relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing";
@@ -20,6 +20,7 @@ public class BreathingActivity : Activity
         Console.Clear();
         DisplayStartingMessage();
         GetReady();
+        Console.WriteLine();
         
         DateTime startTime = DateTime.Now; // It is NOW
         DateTime endTime = startTime.AddSeconds(_duration); // Sets duration adding seconds to start time
