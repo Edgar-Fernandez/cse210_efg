@@ -1,10 +1,10 @@
-public class SimpleGoal : Goal
+public class EternalGoal : Goal
 {
     //Atributes
 
 
     //Constructors
-    public SimpleGoal(string? name, string? description): base(name, description)
+    public EternalGoal(string? name, string? description): base(name, description)
     {
     }
 
@@ -30,21 +30,20 @@ public class SimpleGoal : Goal
     } 
     public override int RecordEvent()
     {
-        _completed = true;
         Console.WriteLine($"Congratulations! you have earned {_points}!");
         return _points;
     }
     public override string GetStringGoal()
     {
-        return $"SimpleGoal:{_name},{_description},{_points},{_completed.ToString()}";
+        return $"EternalGoal:{_name},{_description},{_points},{_completed.ToString()}";
     }
     public override string ShowGoal()
-    {
-        string compInd = "[ ]"; // Completed indicator
-        if (_completed)
-        {
-            compInd = "[X]";
-        }
-        return $"{compInd} {_name} ({_description})";
+    {   
+        return $"[ ] {_name} ({_description})";
     }
+
+
+
+
+
 }

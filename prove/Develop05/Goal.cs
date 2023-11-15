@@ -7,7 +7,7 @@ public abstract class Goal
     protected bool _completed;
 
     //Constructors //
-    public Goal(string name, string description)
+    public Goal(string? name, string? description)
     {
         _name = name;
         _description = description;
@@ -20,6 +20,10 @@ public abstract class Goal
     public abstract int RecordEvent();
     public abstract string GetStringGoal();
     public abstract string ShowGoal();
+    public string ShowGoalSelection()
+    {
+        return $" {_name}";
+    }
     public bool IsCompleted()
     {
         return _completed;
