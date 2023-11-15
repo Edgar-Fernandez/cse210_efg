@@ -4,10 +4,8 @@ public class SimpleGoal : Goal
 
 
     //Constructors
-    SimpleGoal(string name, string description) : base (name, description)
+    public SimpleGoal(string name, string description): base(name, description)
     {
-        _name = name;
-        _description = description;
     }
 
     //Methods    

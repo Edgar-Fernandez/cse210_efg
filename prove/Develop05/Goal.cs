@@ -7,9 +7,10 @@ public abstract class Goal
     protected bool _completed;
 
     //Constructors //
-
-    Goal(string name, string description)
+    public Goal(string name, string description)
     {
+        _name = name;
+        _description = description;
         _points = 0;
         _completed = false;
     }
@@ -23,7 +24,4 @@ public abstract class Goal
     {
         return _completed;
     }
-
-
-
 }
