@@ -1,6 +1,5 @@
-15
+33
 SimpleGoal:1,1,1,True
 EternalGoal:2,2,2,False
-ChecklistGoal:nam3,desc3,3,True,3,3,300
-ChecklistGoal:nam4,desc4,4,False,4,2,400
-ChecklistGoal:nam5,desc5,5,False,5,0,500
+ChecklistGoal:3,3,3,True,3,3,3
+ChecklistGoal:4,4,4,True,4,4,4

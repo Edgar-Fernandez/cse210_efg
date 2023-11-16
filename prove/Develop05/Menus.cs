@@ -35,14 +35,11 @@ public class Menus
         goalTypeInt = int.Parse(goalType);
         return goalTypeInt;
     }
-    public int DisplayEventGoals() // Diplays Goals List to select one to accomplish. 
+    public int DisplayEventGoals(List<Goal> goalList) // Diplays Goals List to select one to accomplish. 
     {
-        /*
         int j = 1;
         string goalAccomp;
         int goalAccompInt;
-        int pointsGotten;
-
         Console.WriteLine("The goals are: ");
         foreach (Goal g in goalList)
         {
@@ -52,7 +49,7 @@ public class Menus
         }
         Console.Write("Which goal did you accomplish?: ");
         goalAccomp = Console.ReadLine();
-        goalAccompInt = int.Parse(goalAccomp);*/
-        return 0;
+        goalAccompInt = int.Parse(goalAccomp);
+        return goalAccompInt;
     }
 }
