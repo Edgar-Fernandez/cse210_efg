@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 public abstract class Goal
 {
     //Atributes
@@ -13,6 +15,22 @@ public abstract class Goal
         _description = description;
         _points = 0;
         _completed = false;
+    }
+
+    public Goal(string name, string description, string points, string completed)
+    {
+        _name = name;
+        _description = description;
+        _points = int.Parse(points);
+        _completed = bool.Parse(completed);
+    }
+
+    public Goal(string name, string description, string points, string completed, string times, string timesDone, string bonus)
+    {
+        _name = name;
+        _description = description;
+        _points = int.Parse(points);
+        _completed = bool.Parse(completed);
     }
 
     //Methods    

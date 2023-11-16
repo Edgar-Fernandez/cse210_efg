@@ -8,6 +8,10 @@ public class SimpleGoal : Goal
     {
     }
 
+    public SimpleGoal(string name, string description, string points, string completed) : base (name, description, points, completed)
+    {
+    }
+
     //Methods   
 
     public override void SetGoal()
@@ -31,7 +35,7 @@ public class SimpleGoal : Goal
     public override int RecordEvent()
     {
         _completed = true;
-        Console.WriteLine($"Congratulations! you have earned {_points}!");
+        Console.WriteLine($"Congratulations! you have earned {_points} points!");
         return _points;
     }
     public override string GetStringGoal()

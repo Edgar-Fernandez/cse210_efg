@@ -10,6 +10,13 @@ public class ChecklistGoal : Goal
     {
     }
 
+    public ChecklistGoal(string name, string description, string points, string completed, string times, string timesDone, string bonus) : base (name, description, points, completed)
+    {
+        _times = int.Parse(times);
+        _timesDone = int.Parse(timesDone);
+        _bonus = int.Parse(bonus);
+    }
+
     //Methods   
 
     public override void SetGoal()
@@ -54,7 +61,7 @@ public class ChecklistGoal : Goal
             totalPoints += _bonus;
             _completed = true;
         }
-        Console.WriteLine($"Congratulations! you have earned {totalPoints}!");
+        Console.WriteLine($"Congratulations! you have earned {totalPoints} points!");
         return totalPoints;
     }
     public override string GetStringGoal()

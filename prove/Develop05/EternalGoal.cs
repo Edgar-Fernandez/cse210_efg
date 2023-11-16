@@ -8,6 +8,10 @@ public class EternalGoal : Goal
     {
     }
 
+    public EternalGoal(string name, string description, string points, string completed) : base (name, description, points, completed)
+    {
+    }
+
     //Methods   
 
     public override void SetGoal()
@@ -30,7 +34,7 @@ public class EternalGoal : Goal
     } 
     public override int RecordEvent()
     {
-        Console.WriteLine($"Congratulations! you have earned {_points}!");
+        Console.WriteLine($"Congratulations! you have earned {_points} points!");
         return _points;
     }
     public override string GetStringGoal()
