@@ -35,7 +35,7 @@ public abstract class Goal
 
     //Methods    
     public abstract void SetGoal();
-    public abstract int RecordEvent();
+    public abstract int RecordEvent(int points);
     public abstract string GetStringGoal();
     public abstract string ShowGoal();
     public string ShowGoalSelection()

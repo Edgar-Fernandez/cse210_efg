@@ -51,7 +51,7 @@ public class ChecklistGoal : Goal
         _timesDone = 0;
 
     } 
-    public override int RecordEvent()
+    public override int RecordEvent(int points)
     {
         if (_completed != true)
         {    
@@ -64,6 +64,7 @@ public class ChecklistGoal : Goal
                 _completed = true;
             }
             Console.WriteLine($"Congratulations! You have earned {totalPoints} points!");
+            Console.WriteLine($"Now you have {points + totalPoints} points!");
             return totalPoints;
         }
                 else

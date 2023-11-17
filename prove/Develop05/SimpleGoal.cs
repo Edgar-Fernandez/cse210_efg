@@ -32,12 +32,13 @@ public class SimpleGoal : Goal
         _description = description;
         _points = pointsInt;
     } 
-    public override int RecordEvent()
+    public override int RecordEvent(int points)
     {
         if (_completed != true)
         {
             _completed = true;
             Console.WriteLine($"Congratulations! You have earned {_points} points!");
+            Console.WriteLine($"Now you have {points + _points} points!");
             return _points;
         }
         else

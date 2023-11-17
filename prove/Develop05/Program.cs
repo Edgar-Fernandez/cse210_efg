@@ -15,8 +15,8 @@ class Program
                201-400 points: Terrestial Level (Yellow  color)
                 >= 401 points: Celestial  Level (Blue    color)
                 Levels are also loaded from files and saved to files using only the amount of points.
-            2. When user tries to liste goals before creating or loading one, an error message appears.
-            3. When user tries to create a goals files before creating or loading goals, an error message appears.  
+            2. When user tries to list goals before creating or loading one, an error message appears.
+            3. When user tries to create a goals file before creating or loading goals, an error message appears.  
             4. When user loads an empty file, an error message appears (NOTE: Loading empty files clears goals cache)          
             5. User cannot record an event when no goals are created or loaded.
             6. Completed goals can not be completed again. A message is shown when the user tries to 
@@ -57,6 +57,9 @@ class Program
                             ChecklistGoal newGoal3 = new ChecklistGoal(null, null);
                             newGoal3.SetGoal();
                             goalList.Add(newGoal3);
+                        break;
+                        default:
+                            Console.WriteLine($"\n{goalType} is not a valid goal type.");
                         break;
                     }
                 break;
@@ -106,8 +109,15 @@ class Program
                     else
                     {
                         int goalAccomp = menus.DisplayEventGoals(goalList) ;
-                        int pointsGotten = goalList[goalAccomp-1].RecordEvent();
-                        points+= pointsGotten;
+                        if (goalAccomp < 1 || goalAccomp >= goalList.Count())
+                        {
+                            Console.WriteLine($"\nGoal No. {goalAccomp} doesn't exist.");
+                        }
+                        else
+                        {
+                            int pointsGotten = goalList[goalAccomp-1].RecordEvent(points);
+                            points+= pointsGotten;
+                        }
                     }
                 break;
                 case 6: // Quit
