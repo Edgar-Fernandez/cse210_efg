@@ -3,3 +3,5 @@ SimpleGoal:1,1,1,True
 EternalGoal:2,2,2,False
 ChecklistGoal:3,3,3,True,3,3,3
 ChecklistGoal:4,4,4,True,4,4,4
+SimpleGoal:simple goal,simple description,50,False
+EternalGoal:eternal goal,eternal description,40,False

@@ -109,7 +109,7 @@ class Program
                     else
                     {
                         int goalAccomp = menus.DisplayEventGoals(goalList) ;
-                        if (goalAccomp < 1 || goalAccomp >= goalList.Count())
+                        if (goalAccomp < 1 || goalAccomp > goalList.Count())
                         {
                             Console.WriteLine($"\nGoal No. {goalAccomp} doesn't exist.");
                         }
