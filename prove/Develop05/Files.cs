@@ -64,7 +64,6 @@ public class Files
             }
             k++;
         }
-        Console.Write($"\nGoals have been loaded from file {fileName}\n");
         return (goalList1, points1);
     }
 

@@ -1,4 +1,4 @@
-33
+500
 SimpleGoal:1,1,1,True
 EternalGoal:2,2,2,False
 ChecklistGoal:3,3,3,True,3,3,3

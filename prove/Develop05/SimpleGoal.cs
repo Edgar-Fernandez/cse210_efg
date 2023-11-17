@@ -34,9 +34,17 @@ public class SimpleGoal : Goal
     } 
     public override int RecordEvent()
     {
-        _completed = true;
-        Console.WriteLine($"Congratulations! you have earned {_points} points!");
-        return _points;
+        if (_completed != true)
+        {
+            _completed = true;
+            Console.WriteLine($"Congratulations! You have earned {_points} points!");
+            return _points;
+        }
+        else
+        {
+            Console.WriteLine($"This goal is already completed. Please select another one.");
+            return 0;
+        }
     }
     public override string GetStringGoal()
     {

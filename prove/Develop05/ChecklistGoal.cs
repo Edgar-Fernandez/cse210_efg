@@ -53,16 +53,24 @@ public class ChecklistGoal : Goal
     } 
     public override int RecordEvent()
     {
-        int totalPoints = _points;
+        if (_completed != true)
+        {    
+            int totalPoints = _points;
 
-        _timesDone++;
-        if (_timesDone == _times)
-        {
-            totalPoints += _bonus;
-            _completed = true;
+            _timesDone++;
+            if (_timesDone == _times)
+            {
+                totalPoints += _bonus;
+                _completed = true;
+            }
+            Console.WriteLine($"Congratulations! You have earned {totalPoints} points!");
+            return totalPoints;
         }
-        Console.WriteLine($"Congratulations! you have earned {totalPoints} points!");
-        return totalPoints;
+                else
+        {
+            Console.WriteLine($"This goal is already completed. Please select another one.");
+            return 0;
+        }
     }
     public override string GetStringGoal()
     {

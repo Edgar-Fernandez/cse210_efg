@@ -8,16 +8,24 @@ class Program
         //Console.WriteLine("Hello Develop05 World!");
         //Eternal quest program
 
-        /*
-        >>> REMEBER TO USE THE METHOD IsCompleted() IT IS IN EACH CLASS
-        >>> USE TI TO DESPLAY LIST AND DISPLAY LIST SELECION METHODS
+        /* 
+            EXCEED CORE REQUIREMENTS
+            1. Funtionality was added to set a level for the user based on the number of points earned:
+                 0-200 points: Telestial  Level (Magenta color)
+               201-400 points: Terrestial Level (Yellow  color)
+                >= 401 points: Celestial  Level (Blue    color)
+                Levels are also loaded from files and saved to files using only the amount of points.
+            2. When user tries to liste goals before creating or loading one, an error message appears.
+            3. When user tries to create a goals files before creating or loading goals, an error message appears.  
+            4. When user loads an empty file, an error message appears (NOTE: Loading empty files clears goals cache)          
+            5. User cannot record an event when no goals are created or loaded.
+            6. Completed goals can not be completed again. A message is shown when the user tries to 
+               record an event for an already completed goal.
         */
 
         int option;
         int points = 0;
         List<Goal> goalList = new List<Goal>();
-        //string fileName;
-        //string[] lines;
 
         Console.Clear();
         Menus menus = new Menus();
@@ -53,24 +61,54 @@ class Program
                     }
                 break;
                 case 2: // List Goals
-                    int i = 1;
-                    foreach (Goal g in goalList)
+                    if (goalList.Count() == 0)
                     {
-                        Console.Write($"{i}.");
-                        Console.WriteLine(g.ShowGoal());
-                        i++;
+                        Console.WriteLine("\nNo goals to list. Create one or load a goals file before listing.");
+                    }
+                    else
+                    {
+                        int i = 1;
+                        Console.WriteLine();
+                        foreach (Goal g in goalList)
+                        {
+                            Console.Write($"{i}.");
+                            Console.WriteLine(g.ShowGoal());
+                            i++;
+                        }
                     }
                 break;
                 case 3: // Save Goals
-                    files.SaveGoalsFile(goalList, points);
+                    if (goalList.Count() == 0)
+                    {
+                        Console.WriteLine("\nNo goals to save. Create one or load a goals file before saving.");
+                    }
+                    else
+                    {
+                        files.SaveGoalsFile(goalList, points);
+                    }
                 break;
                 case 4: // Load Goals 
-                    (goalList, points) = files.LoadGoalsFile();                    
+                    (goalList, points) = files.LoadGoalsFile();       
+                    if (goalList.Count() == 0)
+                    {
+                        Console.WriteLine("\nNo goals loaded. Check your file.");
+                    }            
+                    else
+                    {
+                        Console.Write($"\n{goalList.Count()} Goals have been loaded.\n");
+                    } 
                 break;
                 case 5: // Record Event  
-                    int goalAccomp = menus.DisplayEventGoals(goalList) ;
-                    int pointsGotten = goalList[goalAccomp-1].RecordEvent();
-                    points+= pointsGotten;
+                    if (goalList.Count() == 0)
+                    {
+                        Console.WriteLine("\nNo goals to record events. Create one or load a goals file before recording events.");
+                    }
+                    else
+                    {
+                        int goalAccomp = menus.DisplayEventGoals(goalList) ;
+                        int pointsGotten = goalList[goalAccomp-1].RecordEvent();
+                        points+= pointsGotten;
+                    }
                 break;
                 case 6: // Quit
                     Console.WriteLine("\nThanks for using the Eternal Quest Program!\n");

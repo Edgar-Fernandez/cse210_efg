@@ -42,8 +42,8 @@ public abstract class Goal
     {
         return $" {_name}";
     }
-    public bool IsCompleted()
+    /*public bool IsCompleted()  // Not used. Functionality included in record event method
     {
         return _completed;
-    }
+    }*/
 }
