@@ -11,9 +11,9 @@ class Program
         /* 
             EXCEED CORE REQUIREMENTS
             1. Funtionality was added to set a level for the user based on the number of points earned:
-                 0-200 points: Telestial  Level (Magenta color)
-               201-400 points: Terrestial Level (Yellow  color)
-                >= 401 points: Celestial  Level (Blue    color)
+                 0- 500 points: Telestial  Level (Magenta color)
+               501-1000 points: Terrestial Level (Yellow  color)
+                >= 1001 points: Celestial  Level (Blue    color)
                 Levels are also loaded from files and saved to files using only the amount of points.
             2. When user tries to list goals before creating or loading one, an error message appears.
             3. When user tries to create a goals file before creating or loading goals, an error message appears.  

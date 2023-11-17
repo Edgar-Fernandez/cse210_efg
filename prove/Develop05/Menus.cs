@@ -14,17 +14,17 @@ public class Menus
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Write($"\nYou have {points} points. Your level is ");  
 
-            if (points >= 0 && points <= 200)
+            if (points >= 0 && points <= 500)
             {
                 Console.BackgroundColor = ConsoleColor.Magenta;
                 level = "Telestial";
             }
-            else if (points >= 201 && points <=400)
+            else if (points >= 501 && points <=1000)
             {
                 Console.BackgroundColor = ConsoleColor.DarkYellow;
                 level = "Terrestial";
             }
-            else if (points >= 401)
+            else if (points >= 1001)
             {
                 Console.BackgroundColor = ConsoleColor.Blue;
                 level = "Celestial";
