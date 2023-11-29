@@ -22,7 +22,7 @@ public class Video
     public void DisplayVideoData(int comments)
     {
         int position = 1;
-        Console.WriteLine($"Video \"{_title}\" by {_author} has a length of {_length} seconds");
+        Console.WriteLine($"\nVideo \"{_title}\" by {_author} has a length of {_length} seconds");
         Console.WriteLine($"and it received the following {comments} comments: \n");
         
         foreach (Comment commentDisplayed in _comments)
