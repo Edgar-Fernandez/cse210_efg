@@ -26,7 +26,7 @@ public class Product
         return _name;
     }
 
-        public string GetProductId()
+    public string GetProductId()
     {
         return _productId;
     }
