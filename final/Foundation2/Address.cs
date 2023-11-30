@@ -27,5 +27,11 @@ public class Address
             return false;
         }
     }
-    
+
+        public string GetFullAddress()
+    {
+        //return _street + " " + _city + " " + _stateProvince + " " + _country;
+        return "Street: \t"+ _street + "\n" + "City: \t\t" + _city + "\n" + "State/Province: " 
+        + _stateProvince + "\n" + "Country: \t" + _country;
+    }
 }

@@ -23,4 +23,20 @@ public class Customer
             return false;
         }
     }
+
+        public void DisplayShipData()
+    {    
+        Console.WriteLine($"{_name}");
+        return;
+    }
+
+    public string GetName()
+    {    
+        return _name;
+    }
+
+        public Address GetAddress()
+    {    
+        return _address;
+    }
 }
