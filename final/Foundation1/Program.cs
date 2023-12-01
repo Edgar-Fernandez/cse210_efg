@@ -42,7 +42,7 @@ class Program
         foreach (Video video in videos) // Display videos and comments
         {
             video.DisplayVideoData(video.CommentsNumber());
+            Console.WriteLine();
         }
-        Console.WriteLine();
     }
 }
