@@ -14,12 +14,6 @@ public class Video
         _length = lenght;
     }
 
-        public Video()
-    {
-        _title = "";
-        _author = "";
-        _length = 0;
-    }
     //Methods
     public void AddComment(Comment comment)
     {
@@ -40,7 +34,7 @@ public class Video
 
         foreach (Comment commentDisplayed in _comments)
         {
-            Console.WriteLine($"{position}. {commentDisplayed._name}: \"{commentDisplayed._comment}\" ");
+            Console.WriteLine($"{position}. {commentDisplayed._name}: \t\"{commentDisplayed._comment}\" ");
             position++;
         }
         return;

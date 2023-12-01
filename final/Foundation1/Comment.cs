@@ -9,9 +9,4 @@ public class Comment
         _name = name;
         _comment = comment;
     }
-        public Comment()
-    {
-        _name = "";
-        _comment = "";
-    }
 }
