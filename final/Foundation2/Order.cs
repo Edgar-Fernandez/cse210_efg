@@ -12,14 +12,14 @@ public class Order
     }
 
     //Methods
-    public double TotalCost()
+    public double ProductsCost()
     {
-        double totalCost = 0;
+        double productsCost = 0;
         foreach (Product product in _products)
         {
-            totalCost += product.GetSubtotal();
+            productsCost += product.GetSubtotal();
         }   
-        return totalCost;
+        return productsCost;
     }
     public int ShippingCost()
     {
@@ -54,6 +54,25 @@ public class Order
         Address addressx = _customer.GetAddress();
         Console.WriteLine($"{addressx.GetFullAddress()}");
         Console.WriteLine("\n--------------------------------------\n");
+        return;
+    }
+
+    public void TotalPrice()
+    {
+        int j = 1;
+        Console.WriteLine("\n+++++++++++ Order Total Price +++++++++++\n");
+        Console.WriteLine("   QTY\tPRODUCT\t\tPRICE\tSUBTOTAL");
+        foreach (Product product in _products)
+        {
+            Console.WriteLine($"{j}. {product.GetQuantity()}\t{product.GetProductName()}\t{product.GetPrice()}\t{product.GetSubtotal()}");
+            j++;
+        }   
+        Console.WriteLine($"\t\t\t\t________");
+        
+        Console.WriteLine($"Shipping Cost\t\t\t{ShippingCost()}");
+        Console.WriteLine($"\t\t\t\t________");
+        Console.WriteLine($"TOTAL PRICE OF THE ORDER\t{ProductsCost() + ShippingCost()}");
+        Console.WriteLine("\n+++++++++++++++++++++++++++++++++++++++++\n");        
         return;
     }
     public void OrderDetails()

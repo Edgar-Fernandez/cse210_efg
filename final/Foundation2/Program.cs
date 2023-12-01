@@ -33,5 +33,6 @@ class Program
 
         order1.Packinglabel();
         order1.ShippingLabel();
+        order1.TotalPrice();
     }
 }
