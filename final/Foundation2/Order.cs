@@ -68,10 +68,11 @@ public class Order
             j++;
         }   
         Console.WriteLine($"\t\t\t\t________");
+        Console.WriteLine($"Products Cost =\t\t\t{ProductsCost()}");
         
-        Console.WriteLine($"Shipping Cost\t\t\t{ShippingCost()}");
+        Console.WriteLine($"Shipping Cost +\t\t\t{ShippingCost()}");
         Console.WriteLine($"\t\t\t\t________");
-        Console.WriteLine($"TOTAL PRICE OF THE ORDER\t{ProductsCost() + ShippingCost()}");
+        Console.WriteLine($"TOTAL PRICE OF THE ORDER =\t{ProductsCost() + ShippingCost()}");
         Console.WriteLine("\n+++++++++++++++++++++++++++++++++++++++++\n");        
         return;
     }
