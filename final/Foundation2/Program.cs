@@ -11,8 +11,8 @@ class Program
 
         Address address1 = new Address("203 Sunshine Boulevard", "Springfied", "Masachusets", "USA"); //Address is created
         Customer customer1 = new Customer ("Walmart Inc.", address1);          // Customer is created using the address
-        Product product1 = new Product("Twinky Wonder", "PAS017", 15.20, 5);   // 1rst product is created
-        Product product2 = new Product("Cheese Crackers", "GAL035", 12.10, 3); // 2nd product is created
+        Product product1 = new Product("Twinky Wonder", "PAS017", 15.20, 11);   // 1rst product is created
+        Product product2 = new Product("Cheese Crackers", "GAL035", 12.10, 12); // 2nd product is created
         Product product3 = new Product("Doritos Nachos", "PAP035", 19, 10);    // 3rd product is created
         List<Product> products1 = new List<Product>                            // Products list is created using products
         {
