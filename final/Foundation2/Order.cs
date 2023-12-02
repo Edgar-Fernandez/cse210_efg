@@ -18,7 +18,7 @@ public class Order
         foreach (Product product in _products)
         {
             productsCost += product.GetSubtotal();
-        }   
+        }
         return productsCost;
     }
     public int ShippingCost()
@@ -43,7 +43,7 @@ public class Order
         {
             Console.WriteLine($"{i}. {product.GetProductName()}\t{product.GetProductId()} ");
             i++;
-        }   
+        }
         Console.WriteLine("\n*************************************\n");
         return;
     }
@@ -60,29 +60,35 @@ public class Order
     public void TotalPrice()
     {
         int j = 1;
+        //const string format = "${33,8}";
+        //double value = 15.1;
+        //Console.WriteLine(string.Format(format, value));
         Console.WriteLine("\n+++++++++++ Order Total Price +++++++++++\n");
         Console.WriteLine("   QTY\tPRODUCT\t\tPRICE\tSUBTOTAL");
         foreach (Product product in _products)
         {
-            Console.WriteLine($"{j}. {product.GetQuantity()}\t{product.GetProductName()}\t{product.GetPrice()}\t{product.GetSubtotal()}");
+            //Console.WriteLine($"{j}. {product.GetQuantity()}\t{product.GetProductName()}\t{product.GetPrice():0.00}\t{product.GetSubtotal():0.00}");
+            Console.Write($"{j}. {product.GetQuantity()}\t{product.GetProductName()}\t{product.GetPrice():0.00}\t");
+            printFormatted("$",product.GetSubtotal());
             j++;
-        }   
+        }
         Console.WriteLine($"\t\t\t\t________");
-        Console.WriteLine($"Products Cost =\t\t\t{ProductsCost()}");
-        
-        Console.WriteLine($"Shipping Cost +\t\t\t{ShippingCost()}");
+        Console.WriteLine($"Products Cost =\t\t\t{ProductsCost():0.00}");
+        Console.WriteLine($"Shipping Cost +\t\t\t{ShippingCost():0.00}");
         Console.WriteLine($"\t\t\t\t________");
-        Console.WriteLine($"TOTAL PRICE OF THE ORDER =\t{ProductsCost() + ShippingCost()}");
-        Console.WriteLine("\n+++++++++++++++++++++++++++++++++++++++++\n");        
+        Console.WriteLine($"TOTAL PRICE OF THE ORDER =\t{ProductsCost() + ShippingCost():0.00}");
+        Console.WriteLine("\n+++++++++++++++++++++++++++++++++++++++++\n");
         return;
     }
-    public void OrderDetails()
+
+    static string format(string description, double cost)
     {
-        return;
+        return string.Format("{0,1} {1,5:0.00}", description, cost);
     }
-    public void SetProduct(Product product)
+
+    static void printFormatted(string description, double cost)
     {
-        _products.Add(product);
-        return;
+        string result = format(description, cost);
+        Console.WriteLine(result);
     }
 }
