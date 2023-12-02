@@ -26,11 +26,11 @@ public class Video
         return _comments.Count();
     }
 
-    public void DisplayVideoData(int comments)
+    public void DisplayVideoData(int comments, int videoNum)
     {
         int position = 1;
-        Console.WriteLine($"\nVideo \"{_title}\" by {_author} has a length of {_length} seconds");
-        Console.WriteLine($"and it received the following {comments} comments: \n");
+        Console.WriteLine($"\n< {videoNum} > Video \"{_title}\" by {_author} has a length of {_length} seconds");
+        Console.WriteLine($"and received the following {comments} comments: \n");
 
         foreach (Comment commentDisplayed in _comments)
         {

@@ -26,7 +26,7 @@ class Program
         Product product21 = new Product("Fritos Original", "PAS2017", 2.20, 10);   // 1rst product is created
         Product product22 = new Product("Lay's X Cheese", "GAL2035", 2.10, 20); // 2nd product is created
         Product product23 = new Product("Cheetos Crunchy", "PAP2035", 3, 30);    // 3rd product is created
-        Product product24 = new Product("Rold Gold  Xtra", "PAP2035", 2.5, 10);    // 3rd product is created
+        Product product24 = new Product("Rold Gold  Xtra", "PAP2035", 2.5, 10);    // 4th product is created
         List<Product> products21 = new List<Product>                            // Products list is created using products
         {
             product21,
