@@ -20,7 +20,7 @@ public class Event
     //Methods
     public string StandardDetails()
     {
-        return "Event " + _title +" (" +_description +" )\n"
+        return "\nEvent " + _title +" (" +_description +" )\n"
         + "will be held on "+ _date+" at " +_time + "\n" + _address.GetFullAddress(); // Add suitable code here
     }
 
@@ -28,4 +28,22 @@ public class Event
     {
         return _address.GetFullAddress();
     }
+
+    public string GetTitle()
+    {       
+        return _title;
+    }
+    public string GetDescription()
+    {       
+        return _description;
+    }
+    public string GetDate()
+    {       
+        return _date;
+    }
+    public string GetTime()
+    {       
+        return _time;
+    }
 }
+
