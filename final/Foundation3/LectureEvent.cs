@@ -14,8 +14,8 @@ public class LectureEvent : Event
     //Methods
     public string FullDetails()
     {
-        Console.WriteLine("fULL DETAILS;");
-        Console.WriteLine(StandardDetails());
+        //Console.WriteLine("fULL DETAILS;");
+        Console.WriteLine(StandardDetails("  FULL DETAILS  "));
         string capacityStr = _capacity.ToString();
         return $"\nThe Lecture Event will have a capacity of " + capacityStr + " seats \nand the speaker will be "+_speaker;
     }

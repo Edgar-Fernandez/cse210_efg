@@ -18,10 +18,10 @@ public class Event
     }
 
     //Methods
-    public string StandardDetails()
+    public string StandardDetails(string type)
     {
-        return "\nEvent " + _title +" (" +_description +" )\n"
-        + "will be held on "+ _date+" at " +_time + "\n" + _address.GetFullAddress(); // Add suitable code here
+        return $"++++++++++++++ {type} ++++++++++++++\n\nEVENT: " + _title +"\nDESCRIPTION: " +_description 
+        + "\nDATE: "+ _date + "\nTIME " + _time + "\n" + _address.GetFullAddress() + "\n"; 
     }
 
     public string StandardAddress()
