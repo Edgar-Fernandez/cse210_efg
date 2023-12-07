@@ -20,10 +20,7 @@ public class LectureEvent : Event
 
     public string ShortDescription()
     {       
-        //return $"\nThe Lecture Event \"{GetTitle()}\" will be held on {GetDate()}.";
-
         return $"\n++++++++++++++ SHORT DESCRIPTION ++++++++++++++\n\nEVENT TYPE: Lecture event\nTITLE: "
         + GetTitle() +"\nDATE: " + GetDate(); 
-
     }
 }

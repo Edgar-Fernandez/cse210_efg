@@ -23,27 +23,13 @@ public class Event
         return $"++++++++++++++ {type} ++++++++++++++\n\nTITLE: " + _title +"\nDESCRIPTION: " +_description 
         + "\nDATE: "+ _date + "\nTIME " + _time + "\n" + _address.GetFullAddress() + "\n"; 
     }
-
-    public string StandardAddress()
-    {
-        return _address.GetFullAddress();
-    }
-
     public string GetTitle()
     {       
         return _title;
     }
-    public string GetDescription()
-    {       
-        return _description;
-    }
     public string GetDate()
     {       
         return _date;
-    }
-    public string GetTime()
-    {       
-        return _time;
     }
 }
 
