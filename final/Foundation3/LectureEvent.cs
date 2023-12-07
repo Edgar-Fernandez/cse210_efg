@@ -14,14 +14,16 @@ public class LectureEvent : Event
     //Methods
     public string FullDetails()
     {
-        //Console.WriteLine("fULL DETAILS;");
-        Console.WriteLine(StandardDetails("  FULL DETAILS  "));
-        string capacityStr = _capacity.ToString();
-        return $"\nThe Lecture Event will have a capacity of " + capacityStr + " seats \nand the speaker will be "+_speaker;
+        return StandardDetails("  FULL DETAILS  ") + "EVENT TYPE: Lecture Event" +
+        "\nSPEAKER: " +_speaker + "\nCAPACITY: " + _capacity.ToString() + " seats";
     }
 
     public string ShortDescription()
-    {
-        return $"\nThe Lecture Event \"{GetTitle()}\" will be held on {GetDate()}.";
+    {       
+        //return $"\nThe Lecture Event \"{GetTitle()}\" will be held on {GetDate()}.";
+
+        return $"\n++++++++++++++ SHORT DESCRIPTION ++++++++++++++\n\nEVENT TYPE: Lecture event\nTITLE: "
+        + GetTitle() +"\nDATE: " + GetDate(); 
+
     }
 }

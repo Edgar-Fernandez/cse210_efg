@@ -20,7 +20,7 @@ public class Event
     //Methods
     public string StandardDetails(string type)
     {
-        return $"++++++++++++++ {type} ++++++++++++++\n\nEVENT: " + _title +"\nDESCRIPTION: " +_description 
+        return $"++++++++++++++ {type} ++++++++++++++\n\nTITLE: " + _title +"\nDESCRIPTION: " +_description 
         + "\nDATE: "+ _date + "\nTIME " + _time + "\n" + _address.GetFullAddress() + "\n"; 
     }
 
