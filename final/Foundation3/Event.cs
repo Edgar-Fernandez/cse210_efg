@@ -28,7 +28,7 @@ public class Event
     public string ShortDescription()
     {
         return $"\n++++++++++++++ SHORT DESCRIPTION ++++++++++++++\n\nEVENT TYPE: {GetEventType()}\nTITLE: "
-        + GetTitle() + "\nDATE: " + GetDate();
+        + GetTitle() + "\nDATE: " + GetDate() + "\n\n";
     }
     public string GetTitle()
     {
