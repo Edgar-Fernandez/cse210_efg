@@ -18,7 +18,7 @@ public class Address
     //Methods
     public string GetFullAddress()
     {
-        return "ADDRESS: "+ _street + ", " + _city + ",\n"  
+        return "ADDRESS: " + _street + ", " + _city + ",\n"
         + _stateProvince + ", " + _country + ".";
     }
 }
