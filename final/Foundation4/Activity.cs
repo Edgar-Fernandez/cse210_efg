@@ -12,21 +12,16 @@ public abstract class Activity
         _date = date;
         _time = time;
     }
-    public Activity(string date, double time, double distance)
-    {
-        _date = date;
-        _time = time;
-    }
 
     //Methods
     public abstract double GetDistance();
-   
+
     public abstract double GetSpeed();
- 
+
     public abstract double GetPace();
 
     public abstract string GetSummary();
- 
+
     public string GetDate()
     {
         return _date;
@@ -35,5 +30,4 @@ public abstract class Activity
     {
         return _time;
     }
-
 }

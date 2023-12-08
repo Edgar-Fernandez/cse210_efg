@@ -14,19 +14,16 @@ public class RunningActivity : Activity
     {
         return _distance;
     }
-   
     public override double GetSpeed()
     {
         return _distance / GetTime() * 60;
     }
- 
     public override double GetPace()
     {
         return 60 / GetSpeed();
     }
     public override string GetSummary()
     {
-        return $"{GetDate()} Running ({GetTime()} min)- Distance: {_distance} km, Speed: {GetSpeed()} kph, Pace: {GetPace()} min per km";
+        return $"{GetDate()} Running ({GetTime()} min)- Distance: {_distance} km, Speed: {GetSpeed()} kph, Pace: {GetPace()} min per km\n";
     }
- 
 }

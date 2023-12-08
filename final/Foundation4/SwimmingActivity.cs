@@ -1,4 +1,4 @@
-public abstract class SwimmingActivity : Activity
+public class SwimmingActivity : Activity
 {
     //Attributes
     private double _laps;
@@ -12,21 +12,18 @@ public abstract class SwimmingActivity : Activity
     //Methods
     public override double GetDistance()
     {
-        return 1;
+        return _laps * 50 / 1000;
     }
-   
     public override double GetSpeed()
     {
-        return 1;
+        return GetDistance() / GetTime() * 60;
     }
- 
     public override double GetPace()
     {
-        return 1;
+        return 60 / GetSpeed();
     }
     public override string GetSummary()
     {
-        return "";
+        return $"{GetDate()} Swimming ({GetTime()} min)- Distance: {GetDistance()} km, Speed: {GetSpeed()} kph, Pace: {GetPace()} min per km\n"; ;
     }
- 
 }
