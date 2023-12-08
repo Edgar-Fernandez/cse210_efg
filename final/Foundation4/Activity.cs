@@ -4,7 +4,7 @@ public abstract class Activity
 {
     //Attributes
     private string _date;
-    private double _time;
+    private double _time; // We changed the attribute name "length" for "time" to better understand the formulas 
 
     //Constructors
     public Activity(string date, double time)
