@@ -1,4 +1,4 @@
-public abstract class RunningActivity : Activity
+public class RunningActivity : Activity
 {
     //Attributes
     private double _distance;
@@ -12,21 +12,21 @@ public abstract class RunningActivity : Activity
     //Methods
     public override double GetDistance()
     {
-        return 1;
+        return _distance;
     }
    
     public override double GetSpeed()
     {
-        return 1;
+        return _distance / GetTime() * 60;
     }
  
     public override double GetPace()
     {
-        return 1;
+        return 60 / GetSpeed();
     }
     public override string GetSummary()
     {
-        return "";
+        return $"{GetDate()} Running ({GetTime()} min)- Distance: {_distance} km, Speed: {GetSpeed()} kph, Pace: {GetPace()} min per km";
     }
  
 }

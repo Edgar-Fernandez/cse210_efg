@@ -1,14 +1,21 @@
+using System.ComponentModel.DataAnnotations;
+
 public abstract class Activity
 {
     //Attributes
     private string _date;
-    private int _length;
+    private double _time;
 
     //Constructors
-    public Activity(string date, int length)
+    public Activity(string date, double time)
     {
         _date = date;
-        _length = length;
+        _time = time;
+    }
+    public Activity(string date, double time, double distance)
+    {
+        _date = date;
+        _time = time;
     }
 
     //Methods
@@ -20,4 +27,13 @@ public abstract class Activity
 
     public abstract string GetSummary();
  
+    public string GetDate()
+    {
+        return _date;
+    }
+    public double GetTime()
+    {
+        return _time;
+    }
+
 }

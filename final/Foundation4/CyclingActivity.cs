@@ -17,7 +17,7 @@ public abstract class CyclingActivity : Activity
    
     public override double GetSpeed()
     {
-        return 1;
+        return _speed;
     }
  
     public override double GetPace()
